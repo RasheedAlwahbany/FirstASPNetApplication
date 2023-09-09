@@ -12,9 +12,10 @@ namespace FirstASPNETApplication.Controllers
         // GET: Language
         public ActionResult Language()
         {
-            var language = new Language() { name="English"};
+            // var language = new Language() { name="English"}; for single variable
+            ViewBag.language = new Language() { name="English"}; // for multy variables
 
-            return View(language);
+            return View(ViewBag);
         }
 
         public ActionResult Edit(int id)
